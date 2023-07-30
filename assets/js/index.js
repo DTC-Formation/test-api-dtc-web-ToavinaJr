@@ -9,6 +9,7 @@ fetch('./assets/js/users.json')
                   let img = document.createElement('img');
                   let name = document.createElement('div');
                   let right = document.createElement('section');
+                  let link = document.createElement('a');
 
                       
                   left.classList.add('left');          
@@ -54,7 +55,10 @@ fetch('./assets/js/users.json')
 
                   userEmailTitle.textContent = "Email";
                   doubleDot_2.textContent = ":";
-                  userEmail.textContent = item.email;
+
+                  link.textContent = item.email;
+                  link.href = `mailto:${item.email}`;
+                  userEmail.append(link);
 
                   rightContainer_2.append(userEmailTitle, doubleDot_2, userEmail);
 
@@ -78,6 +82,7 @@ fetch('./assets/js/users.json')
 
                   let street = document.createElement('div');
                   let suite = document.createElement('div');
+                  let city = document.createElement('div');
                   let zipCode = document.createElement('div');
 
                   street.classList.add('street');
@@ -85,12 +90,47 @@ fetch('./assets/js/users.json')
                   zipCode.classList.add('zip-code');
                   
                   street.textContent = `Street : ${item.address.street}`;
-                  suite.textContent = `Suite : ${item.address.suite}`
-                  zipCode.textContent = `Zip Code : ${item.address.zipcode}`
+                  suite.textContent = `Suite : ${item.address.suite}`;
+                  city.textContent = `City : ${item.address.city}`;
+                  zipCode.textContent = `Zip Code : ${item.address.zipcode}`;
 
-                  userAdresse.append(street, suite, zipCode);
+                  userAdresse.append(street, suite, city, zipCode);
                   rightContainer_3.append(userAdresseTitle, doubleDot_3, userAdresse);
-                  right.append(rightContainer_1, rightContainer_2, rightContainer_3);
+
+                  /* ******************************************* */
+
+                  
+                  
+                  let rightContainer_4 = document.createElement('div');
+                  let userCompanyTitle = document.createElement('div');
+                  let userCompany = document.createElement('div');
+                  let doubleDot_4 = document.createElement('span');
+
+                  rightContainer_4.classList.add('right-container');
+                  userCompanyTitle.classList.add('title');
+                  userCompany.classList.add('response');
+                  userCompany.classList.add('company');
+
+                  doubleDot_4.classList.add('double-dot');
+
+                  userCompanyTitle.textContent = "Company";
+                  doubleDot_4.textContent = ":";
+
+                  let companyName = document.createElement('div');
+                  let companyBio = document.createElement('div');
+                  let companyBs = document.createElement('div');
+
+                  companyName.classList.add('company-name');
+                  companyBio.classList.add('company-bio');
+                  companyBs.classList.add('company-bs');
+                  
+                  companyName.textContent = `Name : ${item.company.name}`;
+                  companyBio.textContent = `Bio : ${item.company.catchPhrase}`;
+                  companyBs.textContent = `Bs : ${item.company.bs}`;
+
+                  userCompany.append(companyName, companyBio, companyBs);
+                  rightContainer_4.append(userCompanyTitle, doubleDot_4, userCompany);
+                  right.append(rightContainer_1, rightContainer_2, rightContainer_3, rightContainer_4);
                   card.append(left, right);
                   body.append(card);
             });
