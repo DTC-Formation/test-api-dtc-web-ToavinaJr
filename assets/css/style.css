@@ -1,0 +1,80 @@
+*{
+      box-sizing: border-box;
+      margin: 0;
+      padding: 0;
+      text-decoration: none;
+}
+
+body{
+      background: #f3f3fa;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+}
+
+.card{
+      display: flex;
+      border-radius: 10px;
+      margin: 10px;
+}
+
+.left{
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      background: #f9c947;
+      padding: 20px;
+      border-radius: 10px 0 0 10px;
+}
+
+.left img{
+      border-radius: 50%;
+      margin-bottom: 30px;
+}
+
+.left .name{
+      background: #ffe7a7;
+      padding: 10px;
+      border-radius: 5px;
+      color: #0396e3;
+      font-weight: bolder;
+      font-size: 18px;
+}
+
+.right{
+      display: flex;
+      flex-direction: column;
+      background: #070401;
+      color: #202124;
+      width: 500px;
+      padding: 20px 40px;
+      border-radius: 0 10px 10px 0;
+}
+
+.right-container{
+      display: flex;
+}
+
+.right .title{
+      width: 25%;
+      font-weight: bold;
+      color: #ffffff;
+}
+
+.right-container div{
+      margin-bottom: 10px;
+}
+
+.right-container .response{
+      color: #9aa0a6;
+}
+
+.right-container .double-dot{
+      margin-right: 20px;
+      color: #ffffff;
+}
+
+.response a{
+      color: #ffffff;
+}
