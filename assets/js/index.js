@@ -127,7 +127,7 @@ fetch('./assets/js/users.json')
                   
                   companyName.textContent = `Name : ${item.company.name}`;
                   companyBio.textContent = `Slogan : ${item.company.catchPhrase}`;
-                  companyBs.textContent = `Bs : ${item.company.bs}`;
+                  companyBs.textContent = `Descri : ${item.company.bs}`;
 
                   userCompany.append(companyName, companyBio, companyBs);
                   rightContainer_4.append(userCompanyTitle, doubleDot_4, userCompany);
