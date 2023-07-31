@@ -10,6 +10,15 @@ body{
       display: flex;
       flex-direction: column;
       align-items: center;
+      background: #0396e3;
+}
+
+h1{
+      background: #f9c947;
+      color: #0396e3;
+      width: 100%;
+      text-align: center;
+      padding: 10px;
 }
 
 .card{

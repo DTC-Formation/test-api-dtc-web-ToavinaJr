@@ -1,7 +1,10 @@
+let body = document.querySelector('body');
+
+body.innerHTML += "<h1> Users list </h1>";
+
 fetch('./assets/js/users.json')
       .then( res => res.json() )
       .then( users => {
-            let body = document.querySelector('body');
 
             users.forEach( item => {
                   let card = document.createElement('div');
