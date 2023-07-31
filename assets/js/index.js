@@ -126,7 +126,7 @@ fetch('./assets/js/users.json')
                   companyBs.classList.add('company-bs');
                   
                   companyName.textContent = `Name : ${item.company.name}`;
-                  companyBio.textContent = `Bio : ${item.company.catchPhrase}`;
+                  companyBio.textContent = `Slogan : ${item.company.catchPhrase}`;
                   companyBs.textContent = `Bs : ${item.company.bs}`;
 
                   userCompany.append(companyName, companyBio, companyBs);
