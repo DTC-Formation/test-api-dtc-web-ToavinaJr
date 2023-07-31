@@ -16,10 +16,11 @@ fetch('./assets/js/users.json')
                   card.classList.add('card');
                   name.classList.add('name');
 
-                  img.src = './assets/images/profil_1.jpg';
+                  img.src = './assets/images/profil_1.jpg';IDBCursor,
                   name.textContent = item.name;
                   left.append(img, name);    
                   
+
                   right.classList.add('right');
                   let rightContainer_1 = document.createElement('div');
                   let userNameTitle = document.createElement('div');

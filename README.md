@@ -1,2 +1,2 @@
 # Lien netlify
-[]
+[]()
